@@ -13,8 +13,6 @@ let attempts = 0;
 
 // for getting valid user input
 function getValidUserInput(userGuess) {
-  console.log(randomNumber);
-
   if (
     userGuess === "" ||
     isNaN(Number(userGuess)) ||
