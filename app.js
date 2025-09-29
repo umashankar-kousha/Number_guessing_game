@@ -8,7 +8,7 @@ let replayBtnEl = document.getElementById("replayBtn");
 let finalResultEl = document.getElementById("finalResult");
 
 // random number and attempts generation
-let randomNumber = Math.floor(Math.random() * 50);
+let randomNumber = Math.floor(Math.random() * 50) + 1;
 let attempts = 0;
 
 // for getting valid user input
@@ -58,7 +58,7 @@ function onClickOnGuss() {
       resultEl.textContent = `${userGuess} Too High`;
       resultEl.classList.add("wrong");
       if (attempts === 5) {
-        finalResultEl.textContent = "You loose the game please Play Again";
+        finalResultEl.textContent = "You lose the game please Play Again";
         guessBtnEl.style.display = "none";
       }
     }
@@ -83,7 +83,7 @@ document.addEventListener("keydown", (event) => {
 replayBtnEl.addEventListener("click", function () {
   guessBtnEl.style.display = "block";
 
-  randomNumber = Math.floor(Math.random() * 50);
+  randomNumber = Math.floor(Math.random() * 50) + 1;
   attempts = 0;
   attemptsEl.textContent = `${attempts}/5`;
   resultEl.textContent = "";
