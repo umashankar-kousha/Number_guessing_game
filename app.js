@@ -1,3 +1,5 @@
+// Dom Elements initialization
+
 let userGuessEl = document.getElementById("userGuess");
 let guessBtnEl = document.getElementById("guessBtn");
 let attemptsEl = document.getElementById("attempts");
@@ -5,9 +7,11 @@ let resultEl = document.getElementById("result");
 let replayBtnEl = document.getElementById("replayBtn");
 let finalResultEl = document.getElementById("finalResult");
 
+// random number and attempts generation
 let randomNumber = Math.floor(Math.random() * 50);
 let attempts = 0;
 
+// for getting valid user input
 function getValidUserInput(userGuess) {
   console.log(randomNumber);
 
@@ -24,6 +28,7 @@ function getValidUserInput(userGuess) {
   }
 }
 
+// on click on guess button functionality
 function onClickOnGuss() {
   let userGuess = userGuessEl.value;
   let isValidInput = getValidUserInput(userGuess);
@@ -62,16 +67,19 @@ function onClickOnGuss() {
   }
 }
 
+// for guess button click
 guessBtnEl.addEventListener("click", () => {
   onClickOnGuss();
 });
 
+// for enter button key
 document.addEventListener("keydown", (event) => {
   if (event.key == "Enter") {
     onClickOnGuss();
   }
 });
 
+// on reset button functionality
 replayBtnEl.addEventListener("click", function () {
   guessBtnEl.style.display = "block";
 
