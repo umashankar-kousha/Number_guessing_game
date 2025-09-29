@@ -55,8 +55,15 @@ input {
   cursor: pointer;
 }
 
+
+
+
+
 .result {
   font-size: 15px;
+}
+
+.correct {
   color: #28a745;
 }
 
