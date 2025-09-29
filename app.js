@@ -51,7 +51,7 @@ function onClickOnGuss() {
       resultEl.textContent = `${userGuess} Too Low`;
       resultEl.classList.add("wrong");
       if (attempts === 5) {
-        finalResultEl.textContent = "You loose the game please Play Again";
+        finalResultEl.textContent = "You lose the game please Play Again";
         guessBtnEl.style.display = "none";
       }
     } else if (randomNumber < userGuess) {

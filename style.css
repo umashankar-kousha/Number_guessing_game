@@ -55,10 +55,6 @@ input {
   cursor: pointer;
 }
 
-
-
-
-
 .result {
   font-size: 15px;
 }
@@ -84,4 +80,9 @@ input {
   font-weight: 500;
   color: #ffffff;
   width: 60%;
+}
+
+.re-play-btn:hover {
+  cursor: pointer;
+  background-color: #5a6268;
 }
